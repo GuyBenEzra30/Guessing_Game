@@ -1,16 +1,35 @@
 import random
+import string
+from nltk.corpus import words
+import nltk
 
 game_title = "The Guessing Game"
 
+nltk.download('words') # download the words corpus if not already downloaded
+
+
+def generate_real_words(count, length):
+    word_list = [word.lower() for word in words.words() if len(word) == length] # Get all words of the specified length
+    return random.sample(word_list, count) 
+
 word_bank = []
 
-with open("Words.txt") as word_file:
-    for line in word_file:
-        word_bank.append(line.rstrip().lower()) # rstrip() is to clear the newline characters.
+# Load or generate a word bank
+try:
+    with open("Words.txt") as word_file:
+        word_bank = [line.strip().lower() for line in word_file] # Load the word bank from the file
+
+except FileNotFoundError:
+    word_bank = [] 
 
 if not word_bank:
-    print("The word bank is empty!")
-    exit()
+    print("No valid words found. Generating a new file with real words...")
+    word_bank = generate_real_words(10, 5)
+    
+    with open("Generated_Words.txt", "w") as gen_file: # Save the word bank to a file
+        gen_file.write("\n".join(word_bank))
+    print("Generated_Words.txt created with 10 real five-letter words.") 
+
 
 random_guess = random.choice(word_bank)
 
