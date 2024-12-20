@@ -8,6 +8,7 @@ Place a text file named Words.txt in the same directory as game.py, if you don't
 
 Run the game:
 Follow the on-screen instructions to play.
+
 You have 5 guesses to figure out the word.
 After each guess, you get feedback:
 Correct letters in the right positions.
