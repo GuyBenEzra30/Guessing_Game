@@ -31,7 +31,7 @@ while guesses_taken < max_guesses:
         continue
         
     elif len(guess) != len(random_guess):
-        print(f"Invalid guess. Please enter a word with {len(random_guess)} letters.")
+        print(f"Invalid guess. Please enter a word with 5 letters.")
         continue
 
     index = 0
