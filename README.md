@@ -5,6 +5,7 @@ Download pip named nltk --> pip install nltk (in the terminal)
 How to Run:
 
 Place a text file named Words.txt in the same directory as game.py, if you don't the game will generate a text file for you.
+
 Run the game:
 Follow the on-screen instructions to play.
 You have 5 guesses to figure out the word.
