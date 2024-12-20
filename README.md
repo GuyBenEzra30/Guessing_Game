@@ -22,3 +22,5 @@ Incorrect letters also marked with underscores (_).
 The game ends when you run out of guesses or guess the word correctly.
 
 Ensure the Words.txt file contains only 5-letter words.
+
+Note: I left a few comments in the code itself for clarification.
