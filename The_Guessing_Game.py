@@ -6,7 +6,7 @@ word_bank = []
 
 with open("Words.txt") as word_file:
     for line in word_file:
-        word_bank.append(line.rstrip().lower()) 
+        word_bank.append(line.rstrip().lower()) # rstrip() is to clear the newline characters.
 
 if not word_bank:
     print("The word bank is empty!")
@@ -24,13 +24,13 @@ print("\nThe word has", len(random_guess), "letters")
 print("You have", max_guesses, "guesses.\n")
 
 while guesses_taken < max_guesses:
-    guess = input("Guess a word: ").lower()
+    guess = input("Guess a word: ").lower() # convert the guess to lowercase.
 
     if not guess.isalpha():
         print("Invalid guess. Please use only letters.")
         continue
-        
-    elif len(guess) != len(random_guess):
+         
+    elif len(guess) != len(random_guess): 
         print(f"Invalid guess. Please enter a word with 5 letters.")
         continue
 
@@ -39,16 +39,16 @@ while guesses_taken < max_guesses:
     for count in guess:
         if count == random_guess[index]:
             print(count, end=" ")
-            if count not in misplaced:
+            if count not in misplaced: 
                 misplaced.append(count)
                 
         elif count in random_guess:
-            if count not in misplaced:
+            if count not in misplaced: # if the letter is not in misplaced, add it to misplaced.
                 misplaced.append(count)
             print("_", end=" ")
             
         else:
-            if count not in incorrect:
+            if count not in incorrect: # if the letter is not in incorrect, add it to incorrect.
                 incorrect.append(count)
             print("_", end=" ")
 
