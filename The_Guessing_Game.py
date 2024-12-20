@@ -23,6 +23,8 @@ print("\nWelcome to", game_title)
 print("\nThe word has", len(random_guess), "letters")
 print("You have", max_guesses, "guesses.\n")
 
+# Main game loop
+
 while guesses_taken < max_guesses:
     guess = input("Guess a word: ").lower() # convert the guess to lowercase.
 
@@ -34,6 +36,8 @@ while guesses_taken < max_guesses:
         print(f"Invalid guess. Please enter a word with 5 letters.")
         continue
 
+    # Track each character of the guess
+    
     index = 0
     
     for count in guess:
