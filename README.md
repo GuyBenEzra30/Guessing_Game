@@ -1,12 +1,10 @@
-Description: The Guessing Game is a Python game where players guess a randomly selected 5-letter word. Players have a limited number of guesses and receive feedback on their guesses.
+The Guessing Game is a Python game where players guess a randomly selected 5-letter word. Players have a limited number of guesses and receive feedback on their guesses.
 
 How to Run:
 
 Place a text file named Words.txt in the same directory as game.py
 Run the game:
 Follow the on-screen instructions to play.
-
-Gameplay:
 
 You have 5 guesses to figure out the word.
 After each guess, you get feedback:
